@@ -1,0 +1,38 @@
+Felicitaciones, ha sido inscripto el siguiente grupo:
+
+<h1>{{ data.equipo }}</h1>
+
+<h3>Integrantes</h3>
+
+<table style="border-collapse: collapse; border: 1px solid black;">
+	<thead>
+		<tr style="background-color: #e2001a;color: white;border: 1px solid black;">
+			<th style="border: 1px solid black;">Nombres y Apellido</th>
+			<th style="border: 1px solid black;">DNI</th>
+			<th style="border: 1px solid black;">Carrera cursada</th>
+			<th style="border: 1px solid black;">Tel&eacute;fono</th>
+			<th style="border: 1px solid black;">E-mail</th>
+		</tr>
+	</thead>
+{% for elem in data.integrantes %}
+	<tr style="border: 1px solid black;">
+			<td style="border: 1px solid black;">{{ elem.nombre }}</td>
+			<td style="border: 1px solid black;">{{ elem.dni }}</td>
+			<td style="border: 1px solid black;">{{ elem.carrera }}</td>
+			<td style="border: 1px solid black;">{{ elem.telefono }}</td>
+			<td style="border: 1px solid black;"><a href="mailto:{{ elem.email }}">{{ elem.email }}</a></td>
+	</tr>
+{% endfor %}
+</table>
+<br>
+<br>
+<br>
+<br>
+Equipo de Diseño <a href="mailto:disenotedxeldorado@gmail.com">TEDxEldorado 2017</a>
+<br>
+<br>
+<br>
+<br>
+<div style="text-align: right; font-size: xx-small;">
+	<h4>&copy; 2017 <a href="mailto:info@polasoft.com.ar">POLASoft</a></h4>
+</div>
