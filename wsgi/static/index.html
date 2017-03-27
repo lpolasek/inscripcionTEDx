@@ -160,17 +160,28 @@
 				<div class="col-sm-10" style="text-align: right;">
 					<ul>
 						<li ng-repeat="error in errores" ng-cloak><strong style="color: #a94442;">{{ error }}</strong></li>
-						<li ng-show="submitted" ng-cloak><strong style="color: #2dd62d;">El equipo ha sido inscripto.</strong></li>
+						<li ng-show="submitted" ng-cloak><strong style="color: #2dd62d;">El equipo ha sido inscripto.<br>No se olviden de enviar la <a target="_blank" href="CONTRATO_DE_CESION_DE_DERECHOS_INTELECTUALES_TEDx_2017.pdf">cesi&oacute;n de derechos</a> y revisar la <a target="_blank" href="CONVOCATORIA_TEDx_2017.pdf">convocatoria</a>.</strong></li>
 					</ul>
 				</div>
 				<div class="col-sm-2">
-					<button type="submit" class="btn btn-danger" ng-click="submit()">
+					<button type="submit" class="btn btn-danger" ng-click="submit()" ng-disabled="submitted">
 						Enviar Inscripcion
 					</button>
 				</div>
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-md-12" style="text-align: center;">
+			<a target="_blank" href="CONTRATO_DE_CESION_DE_DERECHOS_INTELECTUALES_TEDx_2017.pdf">CONTRATO DE CESION DE DERECHOS INTELECTUALES TEDx 2017</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12" style="text-align: center;">
+			<a target="_blank" href="CONVOCATORIA_TEDx_2017.pdf">CONVOCATORIA TEDx 2017</a>
+		</div>
+	</div>
+
 	<div class="row">
 		<div class="col-md-12" style="text-align: right;">
 			<h4>&copy; 2017 <a href="mailto:info@polasoft.com.ar">POLASoft</a></h4>

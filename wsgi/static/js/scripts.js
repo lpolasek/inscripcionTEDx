@@ -76,8 +76,8 @@ app.controller('mainController', function($scope, $http, $timeout) {
 		if($scope.v_equipo.$invalid) {
 			$scope.errores.push('Debe indicar el nombre del equipo.');
 		}
-		if($scope.integrantes.length < 1) {
-			$scope.errores.push('El equipo debe tener al menos un integrante.');
+		if(($scope.integrantes.length < 3) || ($scope.integrantes.length >6)) {
+			$scope.errores.push('El equipo debe tener entre 3 y 6 integrantes.');
 		}
 		if($scope.errores.length == 0) {
 			$scope.submitting = true;
@@ -93,12 +93,6 @@ app.controller('mainController', function($scope, $http, $timeout) {
 				function(response) {
 					$scope.submitted = true;
 					$scope.submitting = false;
-					$scope.limpiar();
-					$scope.limpiar('v_equipo', 'equipo', '');
-					$scope.integrantes = [];
-					$timeout( () => {
-						$scope.submitted = false;
-					}, 10000);
 				},
 				function(response) {
 					$scope.submitting = false;
